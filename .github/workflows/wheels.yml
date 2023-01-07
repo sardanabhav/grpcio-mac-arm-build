@@ -7,6 +7,7 @@ on:
   pull_request:
   # schedule:
   #   - cron: '35 5 * * *'
+  
 
 jobs:
   check_release:
