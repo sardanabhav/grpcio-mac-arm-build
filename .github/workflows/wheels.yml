@@ -16,11 +16,7 @@ jobs:
       latest_version: ${{ steps.grpcio_version.outputs.grpcio_current_version }}
     runs-on: ubuntu-latest
     steps:
-      - id: get_release
-        uses: pozetroninc/github-action-get-latest-release@master
-        with:
-          repository: ${{ github.repository }}
-
+    
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
