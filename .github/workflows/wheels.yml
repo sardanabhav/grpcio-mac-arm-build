@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: get_release
-        uses: sardanabhav/github-action-get-latest-release@master
+        uses: pozetroninc/github-action-get-latest-release@master
         with:
           repository: ${{ github.repository }}
 
