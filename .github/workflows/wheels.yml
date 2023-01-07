@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: get_release
-        uses: sardanabhav/grpcio-mac-arm-build
+        uses: sardanabhav/grpcio-mac-arm-build@main
         with:
           repository: ${{ github.repository }}
 
