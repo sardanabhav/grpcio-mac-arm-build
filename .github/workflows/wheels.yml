@@ -5,8 +5,8 @@ on:
     branches:    
       - main
   pull_request:
-  schedule:
-    - cron: '35 5 * * *'
+  # schedule:
+  #   - cron: '35 5 * * *'
 
 jobs:
   check_release:
@@ -29,7 +29,7 @@ jobs:
       - name: Check latest available grpcio release
         id: grpcio_version
         run: |
-          GRPCIO_LATEST_VERSION=$(pip3 index versions --no-binary grpcio grpcio | grep grpcio | sed -E 's/grpcio \(([0-9.]+)\)/\1/')
+          GRPCIO_LATEST_VERSION=1.47.2
           echo "Latest grpcio version on PyPI: $GRPCIO_LATEST_VERSION"
           echo "grpcio_current_version=$GRPCIO_LATEST_VERSION" >> $GITHUB_OUTPUT
           
